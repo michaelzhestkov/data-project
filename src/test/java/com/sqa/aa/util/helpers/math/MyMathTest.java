@@ -1,9 +1,8 @@
 package com.sqa.aa.util.helpers.math;
 
-import org.junit.*;
-import org.junit.runner.*;
-import org.junit.runners.*;
-import org.junit.runners.Parameterized.*;
+import static org.testng.Assert.*;
+
+import org.testng.annotations.*;
 
 import com.sqa.aa.util.helpers.*;
 
@@ -29,9 +28,9 @@ import com.sqa.aa.util.helpers.*;
  * @since 1.0
  *
  */
-@RunWith(Parameterized.class)
+
 public class MyMathTest {
-	@Parameters
+	@DataProvider(name = "Power Data")
 	public static Object[][] getData() {
 		Object[][] data = { { 2.0, 2.0, 4.0 }, { 5.0, 2.0, 25.0 }, { 4.0, 3.0, 64.0 }, { 1.0, 0.0, 1.0 },
 				{ 3.0, 1.0, 3.0 }, { 2.0, 1.5, 4.00 }
@@ -40,25 +39,8 @@ public class MyMathTest {
 		return data;
 	}
 
-	private double expectedResult;
-	private double num;
+	@Test(enabled = false)
 
-	private double power;
-
-	/**
-	 * @param num
-	 * @param power
-	 * @param expectedResult
-	 */
-	public MyMathTest(double num, double power, double expectedResult) {
-		super();
-		this.num = num;
-		this.power = power;
-		this.expectedResult = expectedResult;// Math.pow(num, power);
-	}
-
-	@Test
-	@Ignore
 	public void testHasCleanDivision() {
 		double num1 = 4;
 		double num2 = 2;
@@ -66,8 +48,8 @@ public class MyMathTest {
 		System.out.println(String.format("Does %.0f divided by %.0f have clean division: %b", num1, num2, result));
 	}
 
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testMyMathClassAdd() {
 		double result;
 		// double number = 0;
@@ -79,8 +61,8 @@ public class MyMathTest {
 
 	}
 
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testMyMathClassDiv() {
 		double result;
 		double addNumber = 10;
@@ -95,8 +77,8 @@ public class MyMathTest {
 
 	}
 
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testMyMathClassMult() {
 		double result;
 		double addNumber = 10;
@@ -111,8 +93,8 @@ public class MyMathTest {
 
 	}
 
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testMyMathClassResetNumbers() {
 		double result;
 		double addNumber = 10;
@@ -125,8 +107,8 @@ public class MyMathTest {
 
 	}
 
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testMyMathClassSub() {
 		double result;
 		double addNumber = 10;
@@ -141,16 +123,15 @@ public class MyMathTest {
 
 	}
 
-	@Test
-	public void testPowerNumbers() {
+	@Test(dataProvider = "Power Data")
+	public void testPowerNumbers(double num, double power, double expectedResult) {
 		double actualResult;
-		double expectedResult = this.expectedResult;
-		double num = this.num;
-		double power = this.power;
+
 		actualResult = MyMath.powerNumber(num, power);
 		String message = String.format("The result of %.0f to the power of %.0f is %.0f", num, power, actualResult);
 		System.out.println(message);
-		Assert.assertEquals(message, expectedResult, actualResult, 0);
+		// TestNg Params: Actual, Expected, delta, Message
+		assertEquals(actualResult, expectedResult, 0, message);
 	}
 
 	// @Test
