@@ -10,7 +10,7 @@
 
 package com.sqa.aa.util.helpers;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 /**
  * AppBasicsTest //ADDD (description of class)
@@ -41,7 +41,8 @@ public class AppBasicsTest {
 
 	/**
 	 * Test method for
-	 * {@link com.sqa.aa.util.helpers.AppBasics#welcomeUserAndGetUserName(java.lang.String)}.
+	 * {@link com.sqa.aa.util.helpers.AppBasics#welcomeUserAndGetUserName(java.lang.String)}
+	 * .
 	 */
 	@Test
 	public void testWelcomeUser() {
