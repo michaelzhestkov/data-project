@@ -12,7 +12,7 @@ package com.sqa.aa.util.helpers;
 
 import java.util.*;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 /**
  * RequestInputTest //ADDD (description of class)
@@ -57,7 +57,7 @@ public class RequestInputTest {
 	 * @param question
 	 * @param userValue
 	 */
-	@After
+	@AfterMethod
 	public void displayOutput() {
 		System.out.println("For the question \"" + question + "\", you have given the value of (" + userValue + ")");
 	}
@@ -66,8 +66,8 @@ public class RequestInputTest {
 	 * Test method for
 	 * {@link com.sqa.aa.util.helpers.RequestInput#getChar(java.lang.String)}.
 	 */
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testGetCharString() {
 
 	}
@@ -77,8 +77,8 @@ public class RequestInputTest {
 	 * {@link com.sqa.aa.util.helpers.RequestInput#getChar(java.lang.String, char[])}
 	 * .
 	 */
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testGetCharStringCharArray() {
 
 	}
@@ -87,8 +87,8 @@ public class RequestInputTest {
 	 * Test method for
 	 * {@link com.sqa.aa.util.helpers.RequestInput#getDouble(java.lang.String)}.
 	 */
-	@Test
-	@Ignore
+	@Test(enabled = false)
+
 	public void testGetDouble() {
 
 	}
