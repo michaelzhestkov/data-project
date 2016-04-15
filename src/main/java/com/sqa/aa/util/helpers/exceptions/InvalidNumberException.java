@@ -8,7 +8,7 @@
  *   
  */
 
-package com.sqa.aa.util.helpers;
+package com.sqa.aa.util.helpers.exceptions;
 
 /**
  * InvalidNumberException //ADDD (description of class)

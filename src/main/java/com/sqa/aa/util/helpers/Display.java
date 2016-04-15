@@ -8,7 +8,7 @@
  *
  */
 
-package com.sqa.aa.util.helpers.Display;
+package com.sqa.aa.util.helpers;
 
 /**
  * DisplayArray //ADDD (description of class)
@@ -36,8 +36,35 @@ public class Display {
 		System.out.println(stringBuilder);
 	}
 
+	// Method should display 2 dimensional array nicely formatted on screen
+	public static void display2DObjectArray(Object[][] matrix) {
+		StringBuilder stringBuilder = new StringBuilder();
+		for (int i = 0; i < matrix.length; i++) {
+			stringBuilder.append("----------");
+		}
+		System.out.println(stringBuilder);
+		for (int i = 0; i < matrix.length; i++) {
+			displayObjectArray(matrix[i]);
+		}
+		System.out.println(stringBuilder);
+	}
+
 	// Method should display array nicely formatted on screen
 	public static void displayArray(int[] array) {
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("|\t");
+		for (int i = 0; i < array.length; i++) {
+			stringBuilder.append(array[i]);
+			if (i < array.length - 1) {
+				stringBuilder.append("\t");
+			}
+		}
+		stringBuilder.append("\t|\n");
+		System.out.print(stringBuilder);
+	}
+
+	// Method should display array nicely formatted on screen
+	public static void displayObjectArray(Object[] array) {
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.append("|\t");
 		for (int i = 0; i < array.length; i++) {
