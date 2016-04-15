@@ -1,11 +1,10 @@
 package com.sqa.aa.util.helpers.math;
 
+import static org.testng.Assert.*;
+
 import java.util.*;
 
-import org.junit.*;
-import org.junit.runner.*;
-import org.junit.runners.*;
-import org.junit.runners.Parameterized.*;
+import org.testng.annotations.*;
 
 import com.sqa.aa.util.helpers.*;
 
@@ -31,9 +30,9 @@ import com.sqa.aa.util.helpers.*;
  * @since 1.0
  *
  */
-@RunWith(Parameterized.class)
+
 public class MultiplicationTests {
-	@Parameters
+	@DataProvider(name = "Multiplication Data")
 	public static Object[][] getData() {
 		Object[][] data = { { new double[] { 2.0, 3.0, 4.0, 2.0 }, 48 }, { new double[] { 2.0, 1.0, 5.0 }, 10 },
 				{ new double[] { 3.0, 1.5 }, 4.5 }, { new double[] { 0.0, 5.0, 15.0, 10.0 }, 0.0 },
@@ -42,26 +41,10 @@ public class MultiplicationTests {
 		return data;
 	}
 
-	private double expectedResult;
-
-	private double[] numbers;
-
-	/**
-	 * @param num
-	 * @param power
-	 * @param expectedResult
-	 */
-	public MultiplicationTests(double[] numbers, double expectedResult) {
-
-		this.numbers = numbers;
-
-		this.expectedResult = expectedResult;// Math.pow(num, power);
-	}
-
-	@Test
-	public void testMultiplication() {
-		double actualResult = MyMath.multNumbers(this.numbers);
-		String numbersString = Arrays.toString(this.numbers);
+	@Test(dataProvider = "Multiplication Data")
+	public void testMultiplication(double[] numbers, double expectedResult) {
+		double actualResult = MyMath.multNumbers(numbers);
+		String numbersString = Arrays.toString(numbers);
 		String errorMessage = String.format(
 				"Error. The result of multilying all numbers %s is actually  %.2f not expected ", numbersString,
 				actualResult);
@@ -69,7 +52,8 @@ public class MultiplicationTests {
 		String message = String.format("The result of multiplying all numbers  %s" + " is %.2f ", numbersString,
 				actualResult);
 		System.out.println(message);
-		Assert.assertEquals(message, this.expectedResult, actualResult, 0);
+		// TestNg Params: Actual, Expected, delta, Message
+		assertEquals(actualResult, expectedResult, 0, message);
 	}
 
 }
