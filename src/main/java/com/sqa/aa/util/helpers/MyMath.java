@@ -31,10 +31,20 @@ public class MyMath {
 		return result;
 	}
 
+	public static boolean evalPrime(int number) {
+		// Add implementation of eval if Prime
+		return true;
+
+	}
+
 	// A static method which let the user know if there is a clean division with
 	// no remainder
 	public static boolean hasCleanDivision(double num1, double num2) {
-
+		double remainder = 0;
+		remainder = num1 % num2;
+		if (remainder == 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -95,6 +105,10 @@ public class MyMath {
 	public double div(double num) {
 		setResult(getResult() / num);
 		return getResult();
+	}
+
+	public boolean evalPrime() {
+		return MyMath.evalPrime((int) getTotal());
 	}
 
 	/**
