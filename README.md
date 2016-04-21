@@ -1,8 +1,8 @@
-### Basic Project2
+### Basic Auto Project
 
-### March 26
+### April 20
 
-A Basic Structure for Maven Projects
+A Basic Auto Project
 
 * Git
 * Java 7
