@@ -1,8 +1,8 @@
-### Basic Project2
+### Advanced Project
 
-### March 26
+### April 20
 
-A Basic Structure for Maven Projects
+An advanced Project which includes 4 branches(for master and general-project) 
 
 * Git
 * Java 7
