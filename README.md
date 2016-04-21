@@ -1,8 +1,8 @@
-### Advanced Project
+### Java Project
 
 ### April 20
 
-An advanced Project which includes 4 branches(for master and general-project) 
+An Java Project which is branch of master branch. 
 
 * Git
 * Java 7
