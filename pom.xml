@@ -2,16 +2,21 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sqa.aa</groupId>
-	<artifactId>basic-project2</artifactId>
+	<artifactId>basic-auto-project</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>Basic Project2</name>
-	<description>A basic structure.</description>
+	<name>Basic Auto Project</name>
+	<description>A basic auto project (branch of general-project branch).</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8.21</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.0</version>
 		</dependency>
 	</dependencies>
 	<build>
