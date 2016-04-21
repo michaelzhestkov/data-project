@@ -1,8 +1,8 @@
-### Basic Project2
+### General Project
 
-### March 26
+### April 20
 
-A Basic Structure for Maven Projects
+A General Project used for automation
 
 * Git
 * Java 7
