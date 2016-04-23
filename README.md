@@ -1,6 +1,6 @@
-### Basic Auto Project
+### Data Project
 
-### April 20
+### April 23
 
 A Basic Auto Project
 
@@ -8,4 +8,4 @@ A Basic Auto Project
 * Java 7
 * Maven
 
-[Anna Antonyan](http://sqasolution.com)
+[Michael Zhestkov](http://sqasolution.com)
