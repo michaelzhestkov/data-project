@@ -5,7 +5,7 @@
 	<artifactId>data-project</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>Data Project</name>
-	<description>A basic auto project (branch of general-project branch).</description>
+	<description>Data Project</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>

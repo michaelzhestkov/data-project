@@ -1,0 +1,28 @@
+- http://msn.com:
+    - Today's weather image element
+    .//*[@id='main']/div[5]/ul/li[2]/div
+    div.weatodaytile
+    - The first item in editors pick section
+    .editorialheadline.headlinelist.weather>ul>li>a[data-id='206'] span:nth-child(1)    OR       a[data-id='206'] span:nth-child(1)
+    .//*[@id='main']/div[5]/ul/li[13]/div/ul/li[1]/a/span[1]
+    By.partialLinkText("Cruz ad imagines Clinton war"
+    - The first button within Sports menu bar
+    a[href='/en-us/sports/nfl'][data-link-type='category']
+    .//*[@id='nav']/div/ul[1]/li[2]/a
+    - The first link to an article under crime
+    //*[@id='main']/div[2]/div/div/div/ul/li[1]/div/ul/li/a/div/h4
+    .hasimage.selected>a>div>h4
+    By.partialLinkText("More than 1,000 people shot")
+
+
+- Vikings under New on TV Tonight
+.//*[@id='sidebar']/div[4]/span/div/div/div[2]/div[1]/div[2]/a
+- An image of Prince who passed away today
+.//*[@id='main']/div[2]/span/div/div/div/div/div/div[3]/div/div/div[1]/a/img
+- Text for someone name who was born today
+.//*[@id='main']/div[6]/span/div/div/div/div/div/div[1]/div/div/div[2]/div/a
+.primary a[href='/name/nm0226817?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=2418400662&pf_rd_r=097JDGC3H3Z22J4Y1AF4&pf_rd_s=center-5&pf_rd_t=15061&pf_rd_i=homepage&ref_=hm_brn_cap_pri_lk1_1']
+- The location of an png image on the page.
+[content='http://ia.media-imdb.com/images/G/01/imdb/images/logos/imdb_fb_logo-1730868325._CB306318125_.png']
+link[href$='.png']
+link[href$='86_.png']
